@@ -1,0 +1,16 @@
+.preview-server.pid
+portfolio-backup-*.zip
+migrate-codex-to-d.ps1
+.DS_Store
+.cloudflared-share.*
+.openai/
+dist/
+node_modules/
+presentation-edit*.mjs
+source-deck*.pptx
+source-deck*.ndjson
+edited-slide-10.png
+slides-montage.png
+生态低语：树洞之声.pptx
+生态低语：树洞之声-slides/
+*.inspect.ndjson
