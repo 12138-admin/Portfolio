@@ -406,7 +406,11 @@
   }
   .about-works-list .skill-item {
     color: inherit;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .about-works-list .skill-item:hover {
+    color: #fff;
   }
   /* Right column */
   .about-right {
@@ -2829,9 +2833,9 @@
         <div class="about-name" id="aboutName">楼子嫣</div>
         <div class="about-works-title" id="aboutWorksTitle">我的技能</div>
         <ul class="about-works-list">
-          <li><span id="workLink1" class="skill-item">产品设计</span></li>
-          <li><span id="workLink3" class="skill-item">用户界面/用户体验</span></li>
-          <li><span id="workLink2" class="skill-item">其他</span></li>
+          <li><a href="#" id="workLink1" class="skill-item about-skill-link" data-target="product">产品设计</a></li>
+          <li><a href="#" id="workLink3" class="skill-item about-skill-link" data-target="ux">用户界面/用户体验</a></li>
+          <li><a href="#" id="workLink2" class="skill-item about-skill-link" data-target="other">其他</a></li>
         </ul>
       </div>
     </div>
@@ -4198,6 +4202,16 @@ function backToAbout() {
 }
 
 document.querySelectorAll('.works-menu-category').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = this.getAttribute('data-target');
+    if (target === 'product') showWork('productContent');
+    else if (target === 'ux') showWork('uxContent');
+    else if (target === 'other') showWork('otherContent');
+  });
+});
+
+document.querySelectorAll('.about-skill-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const target = this.getAttribute('data-target');
