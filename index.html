@@ -2322,6 +2322,56 @@
     height: auto;
     border-radius: 2px;
   }
+  .griddle-keyword-slide {
+    position: relative;
+  }
+  .griddle-keyword-legend {
+    position: absolute;
+    left: 53.7%;
+    right: 4.2%;
+    bottom: 5.2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+    padding: 14px 18px;
+    border: 1px solid rgba(217, 120, 62, 0.42);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.86);
+    box-shadow: 0 8px 24px rgba(73, 53, 40, 0.08);
+    color: #6f6a67;
+    box-sizing: border-box;
+  }
+  .griddle-keyword-label {
+    margin-right: 2px;
+    color: #d9783e;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  .griddle-keyword-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 4px 11px;
+    border-radius: 999px;
+    background: rgba(217,120,62,0.1);
+    color: #8b5a3e;
+    font-size: 15px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  @media (max-width: 720px) {
+    .griddle-keyword-legend {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin: -10px 12px 18px;
+      padding: 12px 14px;
+    }
+    .griddle-keyword-chip { font-size: 13px; }
+  }
   /* 电饼铛封面与下方内容之间不显示多余横线 */
   #detail-product-3 > .detail-body > .detail-divider:first-child {
     display: none;
@@ -3414,7 +3464,17 @@ Redesign">产品设计<br>用户调研<br>改良设计</div>
   </div>
   <section class="griddle-ppt-gallery" aria-labelledby="griddle-ppt-gallery-title">
     <div class="griddle-ppt-gallery-list">
-      <img class="griddle-ppt-gallery-image" src="project3-ppt-03.png" alt="便携式电饼铛项目展示第3页">
+      <div class="griddle-keyword-slide">
+        <img class="griddle-ppt-gallery-image" src="project3-ppt-03.png" alt="便携式电饼铛项目展示第3页，已标注关键词">
+        <div class="griddle-keyword-legend" aria-label="关键词标注">
+          <span class="griddle-keyword-label">关键词</span>
+          <span class="griddle-keyword-chip">蒸汽特征</span>
+          <span class="griddle-keyword-chip">视觉吸引力</span>
+          <span class="griddle-keyword-chip">清晰的操作界面</span>
+          <span class="griddle-keyword-chip">现代厨房家电</span>
+          <span class="griddle-keyword-chip">人体工程学</span>
+        </div>
+      </div>
       <img class="griddle-ppt-gallery-image" src="project3-ppt-04.png" alt="便携式电饼铛项目展示第4页">
       <img class="griddle-ppt-gallery-image" src="project3-ppt-05.png" alt="便携式电饼铛项目展示第5页">
       <img class="griddle-ppt-gallery-image" src="project3-ppt-06.png" alt="便携式电饼铛项目展示第6页">
