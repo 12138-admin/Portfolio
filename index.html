@@ -2325,57 +2325,16 @@
   .griddle-keyword-slide {
     position: relative;
   }
-  .griddle-keyword-legend {
+  .griddle-text-mark {
     position: absolute;
-    left: 53.7%;
-    right: 4.2%;
-    bottom: 5.2%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px 12px;
-    padding: 14px 18px;
-    border: 1px solid rgba(217, 120, 62, 0.42);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.86);
-    box-shadow: 0 8px 24px rgba(73, 53, 40, 0.08);
-    color: #6f6a67;
-    box-sizing: border-box;
-  }
-  .griddle-keyword-legend--design {
-    top: 6%;
-    bottom: auto;
-  }
-  .griddle-keyword-label {
-    margin-right: 2px;
-    color: #d9783e;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-  }
-  .griddle-keyword-chip {
-    display: inline-flex;
-    align-items: center;
-    min-height: 28px;
-    padding: 4px 11px;
-    border-radius: 999px;
-    background: rgba(217,120,62,0.1);
-    color: #8b5a3e;
-    font-size: 15px;
-    line-height: 1.2;
-    white-space: nowrap;
+    z-index: 1;
+    height: 2.4%;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, transparent 18%, rgba(255, 231, 71, 0.78) 18%, rgba(255, 231, 71, 0.78) 88%, transparent 88%);
+    pointer-events: none;
   }
   @media (max-width: 720px) {
-    .griddle-keyword-legend {
-      position: relative;
-      left: auto;
-      right: auto;
-      bottom: auto;
-      top: auto;
-      margin: -10px 12px 18px;
-      padding: 12px 14px;
-    }
-    .griddle-keyword-chip { font-size: 13px; }
+    .griddle-text-mark { height: 2.8%; }
   }
   /* 电饼铛封面与下方内容之间不显示多余横线 */
   #detail-product-3 > .detail-body > .detail-divider:first-child {
@@ -3471,25 +3430,19 @@ Redesign">产品设计<br>用户调研<br>改良设计</div>
     <div class="griddle-ppt-gallery-list">
       <div class="griddle-keyword-slide">
         <img class="griddle-ppt-gallery-image" src="project3-ppt-03.png" alt="便携式电饼铛项目展示第3页，已标注关键词">
-        <div class="griddle-keyword-legend" aria-label="关键词标注">
-          <span class="griddle-keyword-label">关键词</span>
-          <span class="griddle-keyword-chip">蒸汽特征</span>
-          <span class="griddle-keyword-chip">视觉吸引力</span>
-          <span class="griddle-keyword-chip">清晰的操作界面</span>
-          <span class="griddle-keyword-chip">现代厨房家电</span>
-          <span class="griddle-keyword-chip">人体工程学</span>
-        </div>
+        <span class="griddle-text-mark" style="left:64.5%;top:43.6%;width:9%;" aria-label="蒸汽特征"></span>
+        <span class="griddle-text-mark" style="left:79.8%;top:46.5%;width:10.5%;" aria-label="视觉吸引力"></span>
+        <span class="griddle-text-mark" style="left:78.3%;top:51%;width:13.5%;" aria-label="清晰的操作界面"></span>
+        <span class="griddle-text-mark" style="left:76.5%;top:60%;width:13%;" aria-label="现代厨房家电"></span>
+        <span class="griddle-text-mark" style="left:77.5%;top:68%;width:12%;" aria-label="人体工程学"></span>
       </div>
       <div class="griddle-keyword-slide">
         <img class="griddle-ppt-gallery-image" src="project3-ppt-04.png" alt="便携式电饼铛项目展示第4页，已标注关键词">
-        <div class="griddle-keyword-legend griddle-keyword-legend--design" aria-label="关键词标注">
-          <span class="griddle-keyword-label">关键词</span>
-          <span class="griddle-keyword-chip">便利和健康</span>
-          <span class="griddle-keyword-chip">功能的多样性</span>
-          <span class="griddle-keyword-chip">饮食的健康</span>
-          <span class="griddle-keyword-chip">简洁、易清洁、节能环保</span>
-          <span class="griddle-keyword-chip">快节奏生活</span>
-        </div>
+        <span class="griddle-text-mark" style="left:11%;top:24.8%;width:9%;" aria-label="便利和健康"></span>
+        <span class="griddle-text-mark" style="left:51%;top:24.8%;width:12%;" aria-label="功能的多样性"></span>
+        <span class="griddle-text-mark" style="left:73%;top:24.8%;width:9%;" aria-label="饮食的健康"></span>
+        <span class="griddle-text-mark" style="left:59%;top:44.4%;width:18%;" aria-label="简洁、易清洁、节能环保"></span>
+        <span class="griddle-text-mark" style="left:24%;top:44.4%;width:12%;" aria-label="快节奏生活"></span>
       </div>
       <img class="griddle-ppt-gallery-image" src="project3-ppt-05.png" alt="便携式电饼铛项目展示第5页">
       <img class="griddle-ppt-gallery-image" src="project3-ppt-06.png" alt="便携式电饼铛项目展示第6页">
