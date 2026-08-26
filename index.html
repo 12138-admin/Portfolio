@@ -2792,6 +2792,177 @@
     .vintold-live-frame { height: 680px; min-height: 0; }
     .vintold-browser { border-radius: 0; }
   }
+
+  /* ===== 移动端布局兜底 =====
+     详情页原本按桌面端的 130px 边距和固定左栏排版，手机宽度不足时会产生横向溢出。
+     这里统一收窄边距，并将详情页的双栏内容改为单栏阅读。 */
+  @media (max-width: 720px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .nav-bar {
+      padding: 13px 16px;
+      min-height: 52px;
+    }
+    .nav-item { padding-inline: 7px; }
+    .nav-divider { margin-inline: 2px; }
+    .nav-lang { padding-inline: 6px; }
+
+    .work-layout {
+      padding: 76px 16px 56px;
+    }
+    .work-gallery {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 36px;
+    }
+    .work-title {
+      margin-bottom: 32px;
+      font-size: 28px;
+    }
+
+    .project-detail {
+      width: 100%;
+      max-width: 100%;
+    }
+    .detail-back {
+      margin-left: 16px;
+      margin-top: 64px;
+    }
+    .detail-header {
+      width: 100%;
+      max-width: none;
+      padding: 28px 20px 18px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
+    }
+    .detail-header-left,
+    .detail-header-right {
+      width: 100%;
+      max-width: none;
+    }
+    .detail-title { font-size: 25px; }
+    .detail-subtitle {
+      font-size: 14px;
+      line-height: 1.75;
+      overflow-wrap: anywhere;
+    }
+    .detail-cover,
+    .detail-concept-banner,
+    .detail-body,
+    .griddle-ppt-gallery,
+    .derived-product-section {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      box-sizing: border-box;
+    }
+    .detail-cover { padding-top: 4px !important; }
+    .detail-body { padding-bottom: 28px !important; }
+
+    .detail-info-row,
+    .detail-problem-row,
+    .design-opportunity-row {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-top: 28px;
+      display: flex !important;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .detail-info-left,
+    .detail-info-right,
+    .detail-problem-left,
+    .detail-problem-right,
+    .detail-problem-row > * {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      flex: 0 1 auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      box-sizing: border-box;
+    }
+    .detail-problem-right { gap: 16px; }
+    .detail-problem-title,
+    .detail-section-title,
+    .griddle-ppt-gallery-title,
+    .derived-product-title { font-size: 27px; }
+    .detail-info-left p,
+    .detail-problem-text,
+    .detail-problem-desc,
+    .detail-body p {
+      overflow-wrap: anywhere;
+    }
+
+    .detail-divider {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .scenario-analysis,
+    .frequency-analysis,
+    .persona-analysis,
+    .project-goals,
+    .drill-ui-flow-section,
+    .drill-ui-section,
+    .drill-render-gallery {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      box-sizing: border-box;
+    }
+    .scenario-analysis-header,
+    .scenario-grid,
+    .frequency-analysis,
+    .persona-grid,
+    .project-goals-grid {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    .drill-ui-flow-section,
+    .drill-ui-section,
+    .drill-render-gallery {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .griddle-ppt-gallery-image,
+    .detail-body img,
+    .detail-body video,
+    .project-video,
+    iframe {
+      max-width: 100%;
+    }
+    .griddle-ppt-gallery-list { width: 100%; }
+    .back-to-top-button {
+      right: 16px;
+      bottom: 18px;
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .nav-bar { padding-inline: 10px; }
+    .nav-item { font-size: 12px; }
+    .detail-header,
+    .detail-cover,
+    .detail-concept-banner,
+    .detail-body,
+    .griddle-ppt-gallery,
+    .derived-product-section { padding-left: 16px !important; padding-right: 16px !important; }
+    .detail-title { font-size: 23px; }
+  }
   </style>
 </head>
 <body class="cursor-open">
